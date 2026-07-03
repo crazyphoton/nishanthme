@@ -1,0 +1,10 @@
+baseURL = 'http://nishanth.me/'
+languageCode = 'en-us'
+title = 'Nishanth Sudharsanam'
+theme = 'ananke'
+sectionPagesMenu = 'main'
+
+[[menus.main]]
+  name = 'Me'
+  url = '/me/'
+  weight = 1
