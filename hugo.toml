@@ -1,4 +1,4 @@
-baseURL = 'http://nishanth.me/'
+baseURL = 'https://nishanth.blog/'
 languageCode = 'en-us'
 title = 'Nishanth Sudharsanam'
 theme = 'ananke'
