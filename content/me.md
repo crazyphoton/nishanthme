@@ -3,7 +3,7 @@ title = 'Me'
 date = 2024-05-17T17:12:15+08:00
 menu = 'main'
 draft = false
-[_build]
+[build]
   list = "never"
 +++
 
