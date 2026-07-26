@@ -1,0 +1,35 @@
+# Raw Notes
+
+- I recently wrote about deciding to run a full marathon.
+- The hardest part isn't the race. It's the long training runs.
+- Long runs are incredibly boring.
+- They are intentionally slow. You aren't pushing yourself the way you do in a 10K.
+- In shorter races, pacing and discomfort occupy your mind. During Zone 2 runs there is much more mental space, which ironically makes them feel longer.
+- Sometimes they even feel like pointless activity. You're just keeping your heart rate low for two hours.
+- Podcasts have always been my solution.
+- I love Mike Duncan's *Revolutions*. It tells one long story over many episodes, which works perfectly for long runs.
+- Recently I've been thinking about synthesis.
+- I consume far more than I produce.
+- I read a lot, listen to a lot of podcasts, and have interesting conversations, but I forget much of it.
+- I've been making a conscious effort to write more, journal more and reflect more.
+- The idea occurred to me: Zone 2 is supposed to be conversational. Why not literally have a conversation?
+- Today I decided to try talking to ChatGPT instead of listening to a podcast.
+- First I tried building a website with some ideas I had, but that didnt really work out because the interace wasnt there.
+- So I thought why not outline a blog post? I was listening to the french revolution podcast, so we started discussing an outline for a blog post.
+- A few back and forths later I had a skeleton.
+- If I can comfortably keep talking, I'm probably still in Zone 2.
+- The conversation feels surprisingly natural now. I planned to run for an hour i ended up running for close to 2 hours.
+- Talking also turned out to be an excellent pacing mechanism - I have always found it hard to run slow, i get bored and eventually speed up and end with a HR of 170-180. This time it was a notable slower run but I ran all through and my HR stayed below 150.
+- Earlier voice interfaces felt awkward.
+- WhisperFlow worked well for dictation but poorly through earphones on the phone.
+- Older voice assistants stopped listening if you paused for a few seconds.
+- ChatGPT voice feels much closer to a phone conversation now.
+- You can pause naturally and continue without losing context.
+- I hardly noticed because I felt like I was talking to someone.
+- Since it was natural, it just looked to most people like I was on a call. 1 or 2 people maybe noticed I was talking to myself but far less than I expected.
+- It genuinely felt like talking to a friend while running.
+- This solves two problems at once.
+- It keeps long runs interesting.
+- It forces me to synthesise what I've been learning.
+- I think I'll end up writing one blog post after every long run while training for the marathon.
+- This feels like a genuine unlock for marathon training.

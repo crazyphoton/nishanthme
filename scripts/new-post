@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -eu
+
+if [ "$#" -ne 1 ] || [ -z "$1" ]; then
+  echo "Usage: ./scripts/new-post post-slug" >&2
+  exit 1
+fi
+
+slug=$1
+
+case "$slug" in
+  *[!a-z0-9-]* | -* | *-)
+    echo "Use lowercase letters, numbers, and internal hyphens only." >&2
+    exit 1
+    ;;
+esac
+
+post_path="content/posts/$slug.md"
+notes_path="raw-notes/posts/$slug.md"
+
+if [ -e "$post_path" ] || [ -e "$notes_path" ]; then
+  echo "A post or notes file already exists for '$slug'." >&2
+  exit 1
+fi
+
+mkdir -p raw-notes/posts
+hugo new content "posts/$slug.md"
+cp raw-notes/_template.md "$notes_path"
+
+echo "Created:"
+echo "  $notes_path"
+echo "  $post_path"
