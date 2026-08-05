@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1b3a"/>
+      <stop offset="0.6" stop-color="#2d2e5e"/>
+      <stop offset="1" stop-color="#4a4a85"/>
+    </linearGradient>
+    <linearGradient id="shell1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb069"/><stop offset="1" stop-color="#5a8a4a"/>
+    </linearGradient>
+    <linearGradient id="shell2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a9e56"/><stop offset="1" stop-color="#4d7a3e"/>
+    </linearGradient>
+    <linearGradient id="shell3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#588a47"/><stop offset="1" stop-color="#3f6633"/>
+    </linearGradient>
+    <linearGradient id="shell4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#477538"/><stop offset="1" stop-color="#335226"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="1000" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#e8e6ff">
+    <circle cx="90" cy="80" r="2.5" opacity="0.9"/><circle cx="200" cy="140" r="1.5" opacity="0.6"/>
+    <circle cx="320" cy="60" r="2" opacity="0.8"/><circle cx="560" cy="90" r="1.8" opacity="0.7"/>
+    <circle cx="800" cy="140" r="1.4" opacity="0.6"/><circle cx="60" cy="300" r="1.6" opacity="0.5"/>
+    <circle cx="850" cy="380" r="1.6" opacity="0.5"/><circle cx="460" cy="45" r="1.3" opacity="0.6"/>
+  </g>
+  <circle cx="770" cy="90" r="36" fill="#f3f0d8" opacity="0.95"/>
+  <circle cx="758" cy="82" r="7" fill="#e3dfc2" opacity="0.7"/>
+  <circle cx="780" cy="102" r="4.5" fill="#e3dfc2" opacity="0.7"/>
+
+  <!-- ====== TURTLE STACK (shifted left to make room for bubbles) ====== -->
+  <!-- turtle 4 bottom -->
+  <g>
+    <ellipse cx="130" cy="905" rx="40" ry="25" fill="#3d5c30"/>
+    <ellipse cx="590" cy="905" rx="40" ry="25" fill="#3d5c30"/>
+    <circle cx="655" cy="825" r="44" fill="#4a6e3a"/>
+    <circle cx="670" cy="813" r="6" fill="#1e2a17"/>
+    <path d="M 685 833 q 10 6 4 12" stroke="#1e2a17" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 85 890 Q 85 745 360 745 Q 640 745 640 890 Z" fill="url(#shell4)"/>
+    <path d="M 85 890 L 640 890 L 640 902 Q 360 926 85 902 Z" fill="#2c4520"/>
+    <g stroke="#2c4520" stroke-width="4" fill="none" opacity="0.8">
+      <path d="M 215 752 L 198 890"/><path d="M 360 745 L 360 890"/><path d="M 505 752 L 522 890"/>
+      <path d="M 112 822 Q 360 783 615 822"/>
+    </g>
+  </g>
+  <!-- turtle 3 -->
+  <g>
+    <ellipse cx="200" cy="750" rx="32" ry="19" fill="#44673a"/>
+    <ellipse cx="520" cy="750" rx="32" ry="19" fill="#44673a"/>
+    <circle cx="573" cy="682" r="36" fill="#517a42"/>
+    <circle cx="586" cy="672" r="5" fill="#1e2a17"/>
+    <path d="M 598 690 q 9 5 3 10" stroke="#1e2a17" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M 150 740 Q 150 622 360 622 Q 572 622 572 740 Z" fill="url(#shell3)"/>
+    <path d="M 150 740 L 572 740 L 572 750 Q 360 768 150 750 Z" fill="#32502a"/>
+    <g stroke="#32502a" stroke-width="3.5" fill="none" opacity="0.8">
+      <path d="M 255 628 L 242 740"/><path d="M 360 622 L 360 740"/><path d="M 465 628 L 478 740"/>
+      <path d="M 174 686 Q 360 655 550 686"/>
+    </g>
+  </g>
+  <!-- turtle 2 -->
+  <g>
+    <ellipse cx="252" cy="626" rx="25" ry="15" fill="#4d7040"/>
+    <ellipse cx="468" cy="626" rx="25" ry="15" fill="#4d7040"/>
+    <circle cx="508" cy="570" r="29" fill="#5c8549"/>
+    <circle cx="519" cy="562" r="4.4" fill="#1e2a17"/>
+    <path d="M 529 576 q 8 4 3 9" stroke="#1e2a17" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M 212 618 Q 212 522 360 522 Q 508 522 508 618 Z" fill="url(#shell2)"/>
+    <path d="M 212 618 L 508 618 L 508 626 Q 360 641 212 626 Z" fill="#3a5c30"/>
+    <g stroke="#3a5c30" stroke-width="3" fill="none" opacity="0.8">
+      <path d="M 286 527 L 277 618"/><path d="M 360 522 L 360 618"/><path d="M 434 527 L 443 618"/>
+      <path d="M 229 575 Q 360 551 491 575"/>
+    </g>
+  </g>
+  <!-- turtle 1 top -->
+  <g>
+    <ellipse cx="294" cy="524" rx="20" ry="12" fill="#587a48"/>
+    <ellipse cx="426" cy="524" rx="20" ry="12" fill="#587a48"/>
+    <circle cx="457" cy="480" r="23" fill="#699154"/>
+    <circle cx="466" cy="473" r="3.6" fill="#1e2a17"/>
+    <path d="M 474 484 q 7 4 2 8" stroke="#1e2a17" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M 264 518 Q 264 444 360 444 Q 456 444 456 518 Z" fill="url(#shell1)"/>
+    <path d="M 264 518 L 456 518 L 456 524 Q 360 536 264 524 Z" fill="#456a38"/>
+    <g stroke="#456a38" stroke-width="2.6" fill="none" opacity="0.8">
+      <path d="M 312 447 L 307 518"/><path d="M 360 444 L 360 518"/><path d="M 408 447 L 413 518"/>
+      <path d="M 277 486 Q 360 468 443 486"/>
+    </g>
+  </g>
+
+  <!-- ====== screen on top ====== -->
+  <g>
+    <rect x="352" y="416" width="16" height="30" rx="3" fill="#33344f"/>
+    <rect x="272" y="316" width="176" height="104" rx="10" fill="#23243d" stroke="#8c8fd9" stroke-width="3"/>
+    <rect x="284" y="328" width="152" height="80" rx="6" fill="#2f3153"/>
+    <rect x="292" y="338" width="42" height="60" rx="4" fill="#3d3f6b" transform="rotate(-6 313 368)"/>
+    <rect x="340" y="341" width="42" height="60" rx="4" fill="#3d3f6b"/>
+    <rect x="388" y="336" width="42" height="60" rx="4" fill="#3d3f6b" transform="rotate(8 409 366)"/>
+    <!-- glitched cards: misaligned, wrong places, one escaping the screen -->
+    <rect x="299" y="347" width="32" height="11" rx="3" fill="#7fb069" transform="rotate(-14 315 352)"/>
+    <rect x="352" y="352" width="32" height="11" rx="3" fill="#e0b45a" transform="rotate(21 368 357)"/>
+    <rect x="341" y="373" width="32" height="11" rx="3" fill="#e0b45a" opacity="0.55" transform="rotate(3 357 378)"/>
+    <rect x="404" y="360" width="32" height="11" rx="3" fill="#8c8fd9" transform="rotate(-32 420 365)"/>
+    <rect x="438" y="402" width="30" height="10" rx="3" fill="#d98c8c" transform="rotate(38 453 407)"/>
+    <!-- scanline glitch bars across the screen -->
+    <rect x="284" y="356" width="152" height="4" fill="#d98c8c" opacity="0.35"/>
+    <rect x="284" y="384" width="152" height="3" fill="#8c8fd9" opacity="0.4"/>
+    <rect x="330" y="328" width="60" height="3" fill="#e0b45a" opacity="0.45"/>
+    <!-- confused question marks on screen -->
+
+    <rect x="284" y="368" width="70" height="3" fill="#7fb069" opacity="0.3"/>
+    <rect x="360" y="394" width="76" height="3" fill="#d98c8c" opacity="0.35"/>
+    <rect x="296" y="332" width="8" height="8" fill="#e8e6ff" opacity="0.5"/>
+    <rect x="418" y="386" width="6" height="6" fill="#e8e6ff" opacity="0.4"/>
+    <rect x="308" y="378" width="5" height="5" fill="#e8e6ff" opacity="0.45"/>
+    <rect x="384" y="352" width="7" height="7" fill="#23243d" opacity="0.9"/>
+    <ellipse cx="360" cy="368" rx="120" ry="72" fill="#8c8fd9" opacity="0.07"/>
+  </g>
+
+  <!-- ====== INFO BUBBLES: each turtle processes and loses bits ====== -->
+  <!-- bubble 4: raw output, 24 blocks -->
+  <g>
+    <rect x="700" y="770" width="168" height="76" rx="12" fill="#23243d" stroke="#8c8fd9" stroke-width="2" opacity="0.95"/>
+    <path d="M 704 830 L 682 838 L 706 846 Z" fill="#23243d" stroke="#8c8fd9" stroke-width="2"/>
+    <g>
+      <rect x="712" y="784" width="22" height="9" rx="2" fill="#7fb069"/><rect x="738" y="784" width="22" height="9" rx="2" fill="#e0b45a"/><rect x="764" y="784" width="22" height="9" rx="2" fill="#8c8fd9"/><rect x="790" y="784" width="22" height="9" rx="2" fill="#d98c8c"/><rect x="816" y="784" width="22" height="9" rx="2" fill="#7fb069"/><rect x="842" y="784" width="18" height="9" rx="2" fill="#e0b45a"/>
+      <rect x="712" y="798" width="22" height="9" rx="2" fill="#8c8fd9"/><rect x="738" y="798" width="22" height="9" rx="2" fill="#d98c8c"/><rect x="764" y="798" width="22" height="9" rx="2" fill="#e0b45a"/><rect x="790" y="798" width="22" height="9" rx="2" fill="#7fb069"/><rect x="816" y="798" width="22" height="9" rx="2" fill="#8c8fd9"/><rect x="842" y="798" width="18" height="9" rx="2" fill="#d98c8c"/>
+      <rect x="712" y="812" width="22" height="9" rx="2" fill="#e0b45a"/><rect x="738" y="812" width="22" height="9" rx="2" fill="#7fb069"/><rect x="764" y="812" width="22" height="9" rx="2" fill="#d98c8c"/><rect x="790" y="812" width="22" height="9" rx="2" fill="#8c8fd9"/><rect x="816" y="812" width="22" height="9" rx="2" fill="#e0b45a"/><rect x="842" y="812" width="18" height="9" rx="2" fill="#7fb069"/>
+      <rect x="712" y="826" width="22" height="9" rx="2" fill="#d98c8c"/><rect x="738" y="826" width="22" height="9" rx="2" fill="#8c8fd9"/><rect x="764" y="826" width="22" height="9" rx="2" fill="#7fb069"/><rect x="790" y="826" width="22" height="9" rx="2" fill="#e0b45a"/><rect x="816" y="826" width="22" height="9" rx="2" fill="#d98c8c"/><rect x="842" y="826" width="18" height="9" rx="2" fill="#8c8fd9"/>
+    </g>
+  </g>
+
+  <!-- bubble 3: summary, 12 blocks -->
+  <g>
+    <rect x="700" y="628" width="150" height="66" rx="12" fill="#23243d" stroke="#8c8fd9" stroke-width="2" opacity="0.95"/>
+    <path d="M 704 678 L 630 690 L 706 694 Z" fill="#23243d" stroke="#8c8fd9" stroke-width="2"/>
+    <g>
+      <rect x="712" y="642" width="26" height="10" rx="2" fill="#7fb069"/><rect x="744" y="642" width="26" height="10" rx="2" fill="#e0b45a"/><rect x="776" y="642" width="26" height="10" rx="2" fill="#8c8fd9"/><rect x="808" y="642" width="26" height="10" rx="2" fill="#d98c8c"/>
+      <rect x="712" y="658" width="26" height="10" rx="2" fill="#e0b45a"/><rect x="744" y="658" width="26" height="10" rx="2" fill="#8c8fd9"/><rect x="776" y="658" width="26" height="10" rx="2" fill="#7fb069"/><rect x="808" y="658" width="26" height="10" rx="2" fill="#e0b45a"/>
+      <rect x="712" y="674" width="26" height="10" rx="2" fill="#8c8fd9"/><rect x="744" y="674" width="26" height="10" rx="2" fill="#7fb069"/><rect x="776" y="674" width="26" height="10" rx="2" fill="#d98c8c"/><rect x="808" y="674" width="26" height="10" rx="2" fill="#7fb069"/>
+    </g>
+  </g>
+
+  <!-- bubble 2: highlights, 6 blocks -->
+  <g>
+    <rect x="660" y="500" width="132" height="52" rx="12" fill="#23243d" stroke="#8c8fd9" stroke-width="2" opacity="0.95"/>
+    <path d="M 664 540 L 572 566 L 666 556 Z" fill="#23243d" stroke="#8c8fd9" stroke-width="2"/>
+    <g>
+      <rect x="672" y="514" width="34" height="11" rx="3" fill="#7fb069"/><rect x="712" y="514" width="34" height="11" rx="3" fill="#e0b45a"/><rect x="752" y="514" width="32" height="11" rx="3" fill="#8c8fd9"/>
+      <rect x="672" y="531" width="34" height="11" rx="3" fill="#e0b45a"/><rect x="712" y="531" width="34" height="11" rx="3" fill="#7fb069"/><rect x="752" y="531" width="32" height="11" rx="3" fill="#d98c8c"/>
+    </g>
+  </g>
+
+  <!-- ====== LOST BITS falling off each layer ====== -->
+  <g>
+    <!-- from bubble 4 to 3 transition: bits tumbling -->
+    <rect x="668" y="742" width="18" height="8" rx="2" fill="#d98c8c" opacity="0.6" transform="rotate(18 677 746)"/>
+    <rect x="646" y="762" width="16" height="7" rx="2" fill="#8c8fd9" opacity="0.45" transform="rotate(-24 654 765)"/>
+    <rect x="688" y="906" width="16" height="7" rx="2" fill="#e0b45a" opacity="0.35" transform="rotate(30 696 909)"/>
+    <rect x="716" y="928" width="14" height="6" rx="2" fill="#7fb069" opacity="0.25" transform="rotate(-15 723 931)"/>
+    <!-- from level 3 -->
+    <rect x="618" y="600" width="16" height="7" rx="2" fill="#d98c8c" opacity="0.55" transform="rotate(-20 626 603)"/>
+    <rect x="636" y="736" width="15" height="7" rx="2" fill="#e0b45a" opacity="0.4" transform="rotate(28 643 739)"/>
+    <rect x="600" y="756" width="14" height="6" rx="2" fill="#8c8fd9" opacity="0.3" transform="rotate(-32 607 759)"/>
+    <!-- from level 2 -->
+    <rect x="560" y="478" width="15" height="7" rx="2" fill="#d98c8c" opacity="0.55" transform="rotate(22 567 481)"/>
+    <rect x="580" y="614" width="14" height="6" rx="2" fill="#8c8fd9" opacity="0.4" transform="rotate(-18 587 617)"/>
+    <rect x="548" y="640" width="13" height="6" rx="2" fill="#e0b45a" opacity="0.3" transform="rotate(26 554 643)"/>
+    <!-- from level 1 to screen -->
+    <rect x="478" y="420" width="14" height="6" rx="2" fill="#d98c8c" opacity="0.5" transform="rotate(-25 485 423)"/>
+    <rect x="498" y="446" width="13" height="6" rx="2" fill="#e0b45a" opacity="0.35" transform="rotate(20 504 449)"/>
+    <rect x="518" y="472" width="12" height="5" rx="2" fill="#8c8fd9" opacity="0.25" transform="rotate(-14 524 474)"/>
+  </g>
+
+  <!-- caption -->
+</svg>
