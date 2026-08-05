@@ -1,8 +1,11 @@
-baseURL = 'https://nishanth.blog/'
+baseURL = 'https://nishanth.me/'
 languageCode = 'en-us'
 title = 'Nishanth Sudharsanam'
 theme = 'ananke'
 sectionPagesMenu = 'main'
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [[menus.main]]
   name = 'Me'
