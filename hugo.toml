@@ -4,9 +4,6 @@ title = 'Nishanth Sudharsanam'
 theme = 'ananke'
 sectionPagesMenu = 'main'
 
-[markup.goldmark.renderer]
-  unsafe = true
-
 [[menus.main]]
   name = 'Me'
   url = '/me/'

@@ -5,11 +5,7 @@ draft: false
 url: /2026/08/text-is-an-inefficient-interface.html
 ---
 
-<div style="text-align: center;">
-
-![Four turtles stacked tallest to smallest with a glitchy dashboard on top; beside them, info bubbles shrink at each layer as bits of data fall away](/img/text-is-an-inefficient-interface.svg)
-
-</div>
+{{< figure src="/img/text-is-an-inefficient-interface.svg" width="450" height="500" alt="Four turtles stacked tallest to smallest with a glitchy dashboard on top; beside them, info bubbles shrink at each layer as bits of data fall away" class="tc" >}}
 
 Automated Value Generation is a process of humans communicating context to the AI. You provide context and constraints the LLM can't get by itself, and if you do it well, throw in enough tokens and some prayers, out comes value! Or that's the hope.
 
