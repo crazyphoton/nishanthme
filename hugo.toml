@@ -1,4 +1,4 @@
-baseURL = 'https://nishanth.me/'
+baseURL = 'https://nishanth.blog/'
 languageCode = 'en-us'
 title = 'Nishanth Sudharsanam'
 theme = 'ananke'
@@ -8,3 +8,6 @@ sectionPagesMenu = 'main'
   name = 'Me'
   url = '/me/'
   weight = 1
+
+[services.googleAnalytics]
+  ID = 'G-JK2H8TS75N'
