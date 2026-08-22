@@ -1,6 +1,6 @@
 ---
 title: "Does running a marathon make you healthier?"
-date: 2026-08-22T18:46:06+08:00
+date: 2026-08-22T00:00:00+08:00
 draft: false
 url: /2026/08/does-running-a-marathon-make-you-healthier.html
 ---
