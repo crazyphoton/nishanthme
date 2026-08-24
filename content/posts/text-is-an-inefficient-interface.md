@@ -1,21 +1,23 @@
 ---
-title: 'Text is an Inefficient Interface'
+title: 'Build Your Own Interface'
 date: 2026-08-05T00:00:00.000+08:00
 draft: false
 url: /2026/08/text-is-an-inefficient-interface.html
 ---
 
-{{< figure src="/img/text-is-an-inefficient-interface.svg" width="450" height="500" alt="Four turtles stacked tallest to smallest with a glitchy dashboard on top; beside them, info bubbles shrink at each layer as bits of data fall away" class="tc" >}}
+Automated Value Generation is the process of providing context and constraints the LLM can't get by itself, and if you do it well, throw in enough tokens and some prayers, out comes value! Or that's the hope.
 
-Automated Value Generation is a process of humans communicating context to the AI. You provide context and constraints the LLM can't get by itself, and if you do it well, throw in enough tokens and some prayers, out comes value! Or that's the hope.
-
-But humans are not very good at sending context to AI. We're impatient, so we send half-baked instructions and expect the model to fill in the gaps. Sometimes it does a good job; sometimes it totally misses the point.
+The problem is humans are not very good at sending context to AI. We're impatient, so we send half-baked instructions and expect the model to fill in the gaps. Sometimes it does a good job; sometimes it totally misses the point.
 
 There's a little dance these days where the newer models ask you a few questions to anchor the response, but that's about it. Too many questions and we get impatient, so the model spits out a large, complicated summary of the decisions it made on our behalf.
 
 But why words at all? The savvier among us have switched to talking to the AI. Speech is higher-density, but that's still ultimately constrained by words. Text is an inefficient interface to begin with, and it's made worse by the fact that AI is notoriously bad at communicating with words; honestly, if you delve into it (heh), it's gotten worse.
 
-There are better ways.
+> **Pro tip:** If you're coding with Claude and can't stand its language, ask it to always use the [Google developer documentation style guide](https://developers.google.com/style) when it talks to you. It dramatically improves readability.
+
+The models are also getting better at this. Claude ditched sentences for a little monospace sketch recently when I asked for a UI change.
+
+{{< figure src="/img/text-is-an-inefficient-interface-monospace-sketch.png" width="1182" height="504" alt="A terminal UI showing a question with numbered options and a boxed ASCII preview sketching a banner-versus-inline layout choice" caption="Claude laying out the options as a monospace sketch instead of a paragraph." class="tc" >}}
 
 ## The spec that ate itself
 
@@ -25,13 +27,19 @@ But code is free! We can build custom interfaces for communicating with the AI.
 
 What worked: pulling the spec up in a browser, highlighting text, commenting inline. The comments fed into a task system the agent was watching, so it picked them up and worked while I kept reviewing. Highlight, comment, move on.
 
+{{< figure src="/img/text-is-an-inefficient-interface-inline-comment.png" width="2306" height="638" alt="A highlighted paragraph on my own site with an inline comment popover; a text box reads 'can you scour the website for these type of meta comments' above Cancel and Add to todo list buttons" caption="Highlighting a paragraph on my own site and dropping an inline comment. The comment goes straight to a todo list the agent watches." class="tc" >}}
+
 That's when it clicked: text is a flexible interface, but it is a very inefficient one.
 
 ## Disposable interfaces
 
 Since then I've built a Kanban board with custom fields for one specific project. The agent posts tasks and progress, I drop comments, and instead of scrolling a chat log I'm looking at a living picture of the work. Sometimes I maintain dashboards, a chart, an annotated document, even throw away interfaces that explain a spec. The right interface depends on what you're optimizing for and what you need clarity on right now. It doesn't have to be visual, either: a friend of mine has the AI read him a voice summary, generated with a different prompt from the text summary it writes out.
 
+{{< figure src="/img/text-is-an-inefficient-interface-throwaway-explainer.png" width="1561" height="792" alt="A terminal on the left with the prompt 'ok create a throw away page for me to read this easily' highlighted, and an arrow pointing to the HTML explainer it generated on the right, titled 'One clean authority split'" caption="My one-line prompt on the left, and the throwaway explainer the agent generated on the right." class="tc" >}}
+
 The unlock is that these are cheap now. AI makes it easy to spin up a review dashboard on the fly. So you build one for this project, maybe just this session, use it, and throw it away. It doesn't need to be a product. It needs to exist for an afternoon.
+
+{{< video src="/img/text-is-an-inefficient-interface-demo.mp4" width="1078" height="644" caption="Asking the agent to build an editable, commentable page so I can review by commenting in place instead of typing out instructions." >}}
 
 ## Custom tools for custom work
 
@@ -49,6 +57,6 @@ This is most useful for heavy, long-running tasks where you expect many iteratio
 2. **Ask Claude to build it**, as a website, or on top of your existing interface. It has to take inputs from you and write them to a todo list.
 3. **Start a loop** that reads off the todo list and implements items using background workers.
 
-## Turtles all the way
+## Mind the drift
 
 We are creating layers upon layers of interpretation here, and there is a loss with each translation. Interfaces drift: your agent might not remember to update the dashboard, so it needs regular pruning to stay true to the task at hand. Remember not to get too attached to your todo list. Throw it away when it's no longer useful!

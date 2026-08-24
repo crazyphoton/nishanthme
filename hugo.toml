@@ -11,3 +11,8 @@ sectionPagesMenu = 'main'
 
 [services.googleAnalytics]
   ID = 'G-JK2H8TS75N'
+
+[params]
+  images = ['icon-512.png']
+  [params.ananke]
+    custom_css = ['custom.css']

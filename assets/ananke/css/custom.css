@@ -1,0 +1,27 @@
+/* Keep images and videos inside the content column on every screen size. */
+.nested-copy-line-height img,
+.nested-copy-line-height video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Screenshots and demo recordings. */
+figure {
+  margin: 2rem 0;
+}
+
+figure img,
+figure video {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #777;
+  text-align: center;
+}

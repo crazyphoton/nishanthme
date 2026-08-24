@@ -1,0 +1,9 @@
+{{- $src := .Get "src" | relURL -}}
+<figure class="{{ .Get "class" | default "tc" }}">
+  <video src="{{ $src }}"{{ with .Get "width" }} width="{{ . }}"{{ end }}{{ with .Get "height" }} height="{{ . }}"{{ end }} autoplay muted loop playsinline controls preload="metadata">
+    Your browser does not support the video tag.
+  </video>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
