@@ -5,7 +5,7 @@ draft: false
 url: /2026/08/text-is-an-inefficient-interface.html
 ---
 
-Automated Value Generation is the process of providing context and constraints the LLM can't get by itself, and if you do it well, throw in enough tokens and some prayers, out comes value! Or that's the hope.
+Getting value out of an AI is mostly context transfer: you hand it the constraints and context it can't figure out on its own, add enough tokens and a few prayers, and value falls out. Or that's the hope.
 
 The problem is humans are not very good at sending context to AI. We're impatient, so we send half-baked instructions and expect the model to fill in the gaps. Sometimes it does a good job; sometimes it totally misses the point.
 
