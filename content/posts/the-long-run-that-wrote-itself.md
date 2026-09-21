@@ -5,6 +5,8 @@ draft: false
 url: /2026/08/the-long-run-that-wrote-itself.html
 ---
 
+<!-- Republish trigger; intentionally invisible in the rendered post. -->
+
 I wrote large chunks of this post while I was running to train for my marathon.
 
 Long runs are the price of wanting to run a marathon. They are essential, but they are also incredibly boring. A full marathon might take 5 to 6 hours. The training runs involve running 1 to 3 hours at a slow pace to build my aerobic base. There is less effort spent pushing the pace or trying to hold on. This is good for the body, but not always for the mind.
