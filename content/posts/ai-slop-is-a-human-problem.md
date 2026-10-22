@@ -8,6 +8,8 @@ Why is AI writing so bad?
 
 It can one-shot an entire app, but if I ask it to help me write a 1000-word essay, it is riddled with non sequiturs and a lack of coherence. I fed it the outline, key ideas of this post, had a discussion about what I wanted to communicate and then asked Claude to write a post and what came out made me squirm. Every thread we touched got a paragraph, weighted equally. There was a certain blandness to it. So here I am writing this all by myself.
 
+{{< figure src="/img/ai-slop-is-a-human-problem-chimps-whiteboard.jpeg" width="928" height="864" alt="A person at a whiteboard full of flowcharts and bar charts points a marker toward two chimpanzees sitting on chairs eating bananas" class="tc" >}}
+
 ## Is it an intelligence problem?
 
 It is often said that being able to communicate your ideas clearly is a sign of intelligence and depth of understanding. My initial response to the sloppy writing was that AI doesn't understand what it's talking about, so it cannot talk about it well. Basically, it is not smart enough, and when it gets smart enough it will write well.
@@ -42,8 +44,6 @@ There are 2 issues here:
 2. Why does it still feel icky after all that work?
 
 I think deep understanding leads to better writing only if the understander is human. Because they have to have human-chunked the problem to understand it, and now they are communicating it back to humans in human-chunks and it clicks. If you will allow me to anthropomorphise LLMs, the AI doesn't need to human-ify the problem to process it. It has understood it in AI-terms and now it has to communicate it in terms the humans will understand. That's why I had to specifically human-chunk it before it was legible. Think of a chimpanzee asking us to explain to another chimpanzee something about its banana preference and complaining that we didn't quite get it right so we don't understand bananas.
-
-{{< figure src="/img/ai-slop-is-a-human-problem-chimps-whiteboard.jpeg" width="928" height="1152" alt="A person at a whiteboard full of flowcharts and bar charts points a marker toward two chimpanzees sitting on chairs eating bananas" class="tc" >}}
 
 Even after we teach it how to dumb things down for us, it still speaks humanese with an AI-accent, which is where we find it not quite right.
 
