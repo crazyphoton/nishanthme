@@ -8,8 +8,6 @@ Why is AI writing so bad?
 
 It can one-shot an entire app, but if I ask it to help me write a 1000-word essay, it is riddled with non sequiturs and a lack of coherence. I fed it the outline, key ideas of this post, had a discussion about what I wanted to communicate and then asked Claude to write a post and what came out made me squirm. Every thread we touched got a paragraph, weighted equally. There was a certain blandness to it. So here I am writing this all by myself.
 
-{{< figure src="/img/ai-slop-is-a-human-problem-chimps-whiteboard.jpeg" width="928" height="864" alt="A person at a whiteboard full of flowcharts and bar charts points a marker toward two chimpanzees sitting on chairs eating bananas" class="tc" >}}
-
 ## Is it an intelligence problem?
 
 It is often said that being able to communicate your ideas clearly is a sign of intelligence and depth of understanding. My initial response to the sloppy writing was that AI doesn't understand what it's talking about, so it cannot talk about it well. Basically, it is not smart enough, and when it gets smart enough it will write well.
@@ -35,6 +33,8 @@ So I refined the process further. I asked it to imagine the reader, gave it guid
 You could argue that "lacked character" is bleeding into Shakespeare territory. I would say character and his unique choice of words in fact made Feynman so enjoyable and hence easy to understand.
 
 ## Human-shaping the communication
+
+{{< figure src="/img/ai-slop-is-a-human-problem-chimps-whiteboard.jpeg" width="928" height="864" alt="A person at a whiteboard full of flowcharts and bar charts points a marker toward two chimpanzees sitting on chairs eating bananas" class="tc" >}}
 
 Code is for computers to process. Writing is for humans to process. Humans have a limited attention span, we can't hold more than 4 things in our brain at the same time, the content can't be too hard or too easy or we get bored, we need jokes to not overload our brain.
 
