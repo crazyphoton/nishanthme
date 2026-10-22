@@ -43,6 +43,8 @@ There are 2 issues here:
 
 I think deep understanding leads to better writing only if the understander is human. Because they have to have human-chunked the problem to understand it, and now they are communicating it back to humans in human-chunks and it clicks. If you will allow me to anthropomorphise LLMs, the AI doesn't need to human-ify the problem to process it. It has understood it in AI-terms and now it has to communicate it in terms the humans will understand. That's why I had to specifically human-chunk it before it was legible. Think of a chimpanzee asking us to explain to another chimpanzee something about its banana preference and complaining that we didn't quite get it right so we don't understand bananas.
 
+{{< figure src="/img/ai-slop-is-a-human-problem-chimps-whiteboard.jpeg" width="928" height="1152" alt="A person at a whiteboard full of flowcharts and bar charts points a marker toward two chimpanzees sitting on chairs eating bananas" class="tc" >}}
+
 Even after we teach it how to dumb things down for us, it still speaks humanese with an AI-accent, which is where we find it not quite right.
 
 I think we would be remiss to treat this inability as representative of its intelligence as we march towards ASI. It's a different skill, which could serve as a bulwark against its ability to influence humans who don't fully trust the being with the AI-accent. Until it eventually learns to speak with all the flaws of a native human.
