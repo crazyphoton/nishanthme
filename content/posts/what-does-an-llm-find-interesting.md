@@ -19,7 +19,7 @@ Could an LLM go through this process of picking a thread and crafting an interes
 I asked Claude: "tell me about a connection you find interesting" and it gave me an interesting blurb about how diffusion models apply in different contexts and how image generation models run the diffusion in reverse.
 
 {{< details summary="Claude's answer" >}}
-One connection I keep coming back to: the same equation describes how heat spreads through a metal bar, how stock options get priced, and how modern AI image generators work.
+The same equation describes how heat spreads through a metal bar, how stock options get priced, and how modern AI image generators work.
 
 Heat. In 1822, Joseph Fourier wrote down the heat equation. It describes how a hot spot spreads out and flattens over time. Each point drifts toward the average of its neighbors.
 
