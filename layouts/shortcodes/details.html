@@ -1,0 +1,7 @@
+{{- $open := eq (.Get "open") "true" -}}
+<details class="post-aside"{{ if $open }} open{{ end }}>
+  <summary>{{ .Get "summary" | default "Details" }}</summary>
+  <div class="post-aside-body" style="border-left:3px solid currentColor;padding-left:1rem;margin-top:.6rem;font-style:italic;opacity:.85">
+  {{ $.Page.RenderString (dict "display" "block") (trim .Inner "\n ") }}
+  </div>
+</details>
