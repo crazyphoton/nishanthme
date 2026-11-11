@@ -1,0 +1,40 @@
+{{- /*
+  Prev/next navigation at the foot of each post. Injected via Ananke's
+  "content-after" hook (called from single.html), so no template override.
+  Older/newer are decided by comparing .Date rather than relying on Hugo's
+  .PrevInSection / .NextInSection naming, which is easy to get backwards.
+*/ -}}
+{{- if eq .Section "posts" -}}
+  {{- $cur := . -}}
+  {{- $older := false -}}
+  {{- $newer := false -}}
+  {{- range (slice .PrevInSection .NextInSection) -}}
+    {{- with . -}}
+      {{- if .Date.Before $cur.Date -}}
+        {{- $older = . -}}
+      {{- else -}}
+        {{- $newer = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if or $older $newer -}}
+    <nav class="flex justify-between items-start bt b--black-10 mt4 pt3 f6" aria-label="More posts">
+      <div class="w-50 pr3">
+        {{- with $older -}}
+          <a href="{{ .RelPermalink }}" class="link dark-gray hover-blue db">
+            <span class="db gray mb1">&larr; Older</span>
+            <span class="db">{{ .Title }}</span>
+          </a>
+        {{- end -}}
+      </div>
+      <div class="w-50 pl3 tr">
+        {{- with $newer -}}
+          <a href="{{ .RelPermalink }}" class="link dark-gray hover-blue db">
+            <span class="db gray mb1">Newer &rarr;</span>
+            <span class="db">{{ .Title }}</span>
+          </a>
+        {{- end -}}
+      </div>
+    </nav>
+  {{- end -}}
+{{- end -}}

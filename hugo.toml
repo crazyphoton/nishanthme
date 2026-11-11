@@ -9,11 +9,6 @@ sectionPagesMenu = 'main'
   url = '/me/'
   weight = 1
 
-[[menus.main]]
-  name = 'Archive'
-  url = '/archive/'
-  weight = 2
-
 [services.googleAnalytics]
   ID = 'G-JK2H8TS75N'
 

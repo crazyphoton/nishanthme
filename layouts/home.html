@@ -12,7 +12,6 @@
     {{ .Content }}
   </article>
 
-  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
   {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
   {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
   {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
@@ -22,8 +21,9 @@
     <div class="pa3 pa4-ns w-100 w-70-ns center">
       {{ $n_posts := $.Param "recent_posts_number" | compare.Default 3 }}
 
+      {{/* Latest — the few recent posts that actually have images. */}}
       <section class="w-100 mw8">
-        {{/* Range through the first $n_posts items of the section */}}
+        <h2 class="f3 fw6 mb3">Latest</h2>
         {{ range (collections.First $n_posts $section) }}
           <div class="w-100 mb4 relative">
             {{ .Render "summary-with-image" }}
@@ -32,24 +32,68 @@
       </section>
 
       {{ if compare.Ge $section_count (math.Add $n_posts 1) }}
-        <section class="w-100">
-          <h2 class="f3 fw6">More recent posts</h2>
-          {{/* Now, range through the next several after the initial $n_posts items. */}}
-          {{ range (collections.First 6 (collections.After $n_posts $section))  }}
-            <h3 class="f5 fw4 mb3">
-              <a href="{{ .RelPermalink }}" class="link black dim">
-                {{ .Title }}
-              </a>
-            </h3>
-          {{ end }}
+        {{/* Explore — a searchable, shuffleable index of every post title.
+             Posts here are short, timeless, untagged aphorisms, so the title
+             is the hook and serendipity beats date-pagination. All client-side,
+             so it works on the static production build. */}}
+        {{ $data := slice }}
+        {{ range $section }}{{ $data = $data | append (dict "t" .Title "u" .RelPermalink) }}{{ end }}
 
-          {{/* Clear onward link so it's obvious there is a full archive. */}}
-          <p class="mt4 f4 fw6">
-            <a href="/archive/" class="link black dim">
-              Browse all {{ $section_count }} posts &rarr;
-            </a>
+        <section class="w-100 mw8 mt5">
+          <div class="flex flex-wrap items-center justify-between mb3">
+            <h2 class="f3 fw6 ma0">Explore {{ $section_count }} posts</h2>
+            <div class="mt2 mt0-ns">
+              <button id="explore-surprise" type="button" class="f6 link dim br2 ph3 pv2 dib white bg-dark-gray bn pointer">🎲 Surprise me</button>
+            </div>
+          </div>
+
+          <input id="explore-search" type="search" autocomplete="off" placeholder="Filter by title — try “sleep”, “focus”, “startup”…"
+                 class="w-100 pa3 input-reset ba b--black-20 br2 f5 mb2" aria-label="Filter posts by title">
+          <p id="explore-count" class="f6 gray mt0 mb3" aria-live="polite"></p>
+
+          <ul id="explore-list" class="list pl0 ma0" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.45rem 1.75rem"></ul>
+
+          <p class="mt4 f5 fw6">
+            <a href="/posts/" class="link black dim">Or browse everything by year &rarr;</a>
           </p>
         </section>
+
+        <script>
+        (function(){
+          var data = {{ $data | jsonify | safeJS }};   // date-descending: newest first
+          var listEl = document.getElementById('explore-list');
+          var countEl = document.getElementById('explore-count');
+          var searchEl = document.getElementById('explore-search');
+          var START = {{ $n_posts }};     // skip the posts already shown under "Latest"
+          var SHOW = 20, MAXSHOW = 90;
+          function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+          function rand(n){return Math.floor(Math.random()*n);}
+          function render(items, note){
+            listEl.innerHTML = items.map(function(it){
+              return '<li class="mb1 lh-copy"><a class="link dark-gray hover-blue" href="'+it.u+'">'+esc(it.t)+'</a></li>';
+            }).join('');
+            countEl.textContent = note;
+          }
+          function showRecent(){
+            render(data.slice(START, START + SHOW),
+              'More recent posts. Search all '+data.length+' by title, or hit Surprise me.');
+          }
+          searchEl.addEventListener('input', function(){
+            var q=this.value.trim().toLowerCase();
+            if(!q){ showRecent(); return; }
+            var m=data.filter(function(it){return it.t.toLowerCase().indexOf(q)>=0;});
+            if(!m.length){ render([], 'No titles match “'+this.value.trim()+'”.'); return; }
+            render(m.slice(0,MAXSHOW), m.length+' match'+(m.length===1?'':'es')+(m.length>MAXSHOW?' (showing first '+MAXSHOW+')':''));
+          });
+          document.getElementById('explore-surprise').addEventListener('click', function(){
+            // Bias toward recent posts (data is newest-first) so serendipity
+            // rarely lands on the older, noisier archive.
+            var pool = Math.min(120, data.length);
+            window.location = data[rand(pool)].u;
+          });
+          showRecent();
+        })();
+        </script>
       {{ end }}
 
     </div>

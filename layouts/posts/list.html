@@ -7,8 +7,7 @@
       {{ end }}
     </header>
 
-    {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "posts") }}
-    {{ $posts := collections.Where .Site.RegularPages "Section" "in" $mainSections }}
+    {{ $posts := .Pages }}
 
     <section class="mw7 center ph3 ph5-l mt4">
       <p class="f6 gray tc mb4">{{ len $posts }} posts</p>
