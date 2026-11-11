@@ -1,7 +1,7 @@
 +++
 title = 'What Does an LLM Find Interesting?'
 date = 2026-11-11T12:00:00+08:00
-draft = true
+draft = false
 +++
 
 {{< figure src="/img/what-does-an-llm-find-interesting-wisps-vs-robot.png" width="1536" height="1024" alt="A thoughtful man with a cloud of faint, half-formed ideas drifting above his head—a castle, a sailboat, mountains—while a cheerful robot holds up its own neat, finished framed picture of a resolved landscape" class="tc" >}}
