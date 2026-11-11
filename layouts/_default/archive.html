@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <header class="tc-l center measure-wide ph3 ph5-l">
+      <h1 class="f1 measure-narrow lh-title center">{{ .Title }}</h1>
+      {{ with .Content }}
+        <div class="nested-links f4 lh-copy center measure mt3 mid-gray">{{ . }}</div>
+      {{ end }}
+    </header>
+
+    {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "posts") }}
+    {{ $posts := collections.Where .Site.RegularPages "Section" "in" $mainSections }}
+
+    <section class="mw7 center ph3 ph5-l mt4">
+      <p class="f6 gray tc mb4">{{ len $posts }} posts</p>
+      {{ range $posts.GroupByDate "2006" }}
+        <h2 class="f2 fw6 bb b--black-10 pb2 mt4 mb3">{{ .Key }}</h2>
+        <ul class="list pl0">
+          {{ range .Pages }}
+            <li class="mb2 flex items-baseline lh-copy">
+              <time class="db gray f6 flex-none" datetime="{{ .Date.Format "2006-01-02" }}" style="width:5rem">{{ .Date.Format "Jan 2" }}</time>
+              <a href="{{ .RelPermalink }}" class="link dark-gray hover-blue">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </section>
+  </article>
+{{ end }}
